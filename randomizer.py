@@ -12,11 +12,16 @@ print("""
       """)
 pprint.pprint("-"*70)
 
-deca = ("Alfi", "Bobby", "Slavco", "Bojan", "Slagjana", "Svetlana", "Stojanco")
+deca = ["Alfi", "Bobby", "Slavco", "Bojan", "Slagjana", "Svetlana", "Stojanco"]
 
 def show_deca(deca):
     for broj,dete in enumerate(deca,start=1):
         print(f"{broj:<2} | {dete:>5}")
+
+def add_dete():
+    new_dete = input("Napiseto go imeto na deteto ==>")
+    deca.append(new_dete)
+    show_deca(deca)
 
 def randomize():
     #print(len(deca))
@@ -41,6 +46,8 @@ def main():
     produkt=input("Vasiot izbor e ... (za da kreirate lista pritisnete Enter) ")
     if produkt == "Lista":
         show_deca(deca)
+    elif produkt == "Add":
+        add_dete()
     else:
         randomize()
 
