@@ -2,6 +2,7 @@
 
 import random
 import pprint
+import datetime
 
 pprint.pprint("-"*70)
 print("""     
@@ -12,8 +13,14 @@ print("""
       """)
 pprint.pprint("-"*70)
 
+### Variabli
+deneska = datetime.date.today()
+nxt_week = deneska + datetime.timedelta(weeks=1)
+kw = nxt_week.isocalendar().week
 deca = ["Alfi", "Bobby", "Slavco", "Bojan", "Slagjana", "Svetlana", "Stojanco"]
 
+
+### Functions
 def show_deca(deca):
     for broj,dete in enumerate(deca,start=1):
         print(f"{broj:<2} | {dete:>5}")
@@ -21,6 +28,11 @@ def show_deca(deca):
 def add_dete():
     new_dete = input("Napiseto go imeto na deteto ==>")
     deca.append(new_dete)
+    show_deca(deca)
+
+def remove_dete():
+    out_dete = input("Koe dete sakate da go izbrisete ===>")
+    deca.remove(out_dete)
     show_deca(deca)
 
 def randomize():
@@ -35,12 +47,24 @@ def randomize():
                dete.append(y)        
     lista = list(zip(dete, produkti))
     print("-"*40)
-    print("Za slednata nedela: ")
+    print("Za slednata nedela: KW >>", kw)
     print("_"*40)
     for dete, produkt in lista:
         print(f"{dete:<10} | treba da kupi | {produkt:<15}")
-
+        with open ('output.txt', 'w') as file:
+            for item in lista:
+                file.write(f"{item}\n")
     print("-"*40)
+    
+    with open('output.txt', 'w') as file:
+        file.write("-" * 40 + "\n")
+        file.write(f"Za slednata nedela: KW >> {kw}\n")
+        file.write("_" * 40 + "\n")
+        for dete, produkt in lista:
+            file.write(f"{dete:<10} | treba da kupi | {produkt:<15}\n")
+        file.write("-" * 40 + "\n")
+
+    print("-" * 40)
     
 def main():
     produkt=input("Vasiot izbor e ... (za da kreirate lista pritisnete Enter) ")
@@ -48,11 +72,10 @@ def main():
         show_deca(deca)
     elif produkt == "Add":
         add_dete()
+    elif produkt == "Delete":
+        remove_dete()    
     else:
         randomize()
 
 if __name__ == "__main__":
     main()
-    
-
-
