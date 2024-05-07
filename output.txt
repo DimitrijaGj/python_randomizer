@@ -1,11 +1,12 @@
 ----------------------------------------
+Listata e kreirana na ==>2024-05-07
 Za slednata nedela: KW >> 20
 ________________________________________
-Bobby      | treba da kupi | Burek          
-Bojan      | treba da kupi | Karamela       
-Slavco     | treba da kupi | Pamuk          
-Stojanco   | treba da kupi | Kifla          
-Slagjana   | treba da kupi | Sunka          
-Alfi       | treba da kupi | Gjuriska       
-Svetlana   | treba da kupi | Sampon         
-----------------------------------------
+Alfi       | treba da kupi | Krastavica     
+Stojanco   | treba da kupi | Marula         
+Svetlana   | treba da kupi | Kromid         
+Bojan      | treba da kupi | Luk            
+Bobby      | treba da kupi | Magdanos       
+Slavco     | treba da kupi | Modar Patlidzan
+Slagjana   | treba da kupi | Piperka        
+________________________________________

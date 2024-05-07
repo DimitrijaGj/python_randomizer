@@ -24,6 +24,14 @@ deca = ["Alfi", "Bobby", "Slavco", "Bojan", "Slagjana", "Svetlana", "Stojanco"]
 def show_deca(deca):
     for broj,dete in enumerate(deca,start=1):
         print(f"{broj:<2} | {dete:>5}")
+    with open ('lista.txt', 'w') as lista:
+        lista.write('_'*25)
+        lista.write("\n")
+        for broj,dete in enumerate(deca,start=1):
+            lista.write(f"{broj:<2} | {dete:>5}\n")
+            lista.write("_"*25)
+            lista.write("\n")
+    print("Listata e aktuelizirana!")
 
 def add_dete():
     new_dete = input("Napiseto go imeto na deteto ==>")
@@ -47,6 +55,7 @@ def randomize():
                dete.append(y)        
     lista = list(zip(dete, produkti))
     print("-"*40)
+    print("Listata e kreirana na ==>", deneska)
     print("Za slednata nedela: KW >>", kw)
     print("_"*40)
     for dete, produkt in lista:
@@ -54,15 +63,16 @@ def randomize():
         with open ('output.txt', 'w') as file:
             for item in lista:
                 file.write(f"{item}\n")
-    print("-"*40)
+    print("_"*40)
     
     with open('output.txt', 'w') as file:
         file.write("-" * 40 + "\n")
+        file.write(f"Listata e kreirana na ==>{deneska}\n")
         file.write(f"Za slednata nedela: KW >> {kw}\n")
         file.write("_" * 40 + "\n")
         for dete, produkt in lista:
             file.write(f"{dete:<10} | treba da kupi | {produkt:<15}\n")
-        file.write("-" * 40 + "\n")
+        file.write("_" * 40 + "\n")
 
 def main():
     produkt=input("Vasiot izbor e ... (za da kreirate lista pritisnete Enter) ")
