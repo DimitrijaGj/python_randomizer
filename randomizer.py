@@ -43,16 +43,6 @@ def manage_deca():
        deca.remove(out_dete)
        show_deca(deca) 
 
-# def add_dete():
-#     new_dete = input("Napiseto go imeto na deteto ==>")
-#     deca.append(new_dete)
-#     show_deca(deca)
-
-# def remove_dete():
-#     out_dete = input("Koe dete sakate da go izbrisete ===>")
-#     deca.remove(out_dete)
-#     show_deca(deca)
-
 def randomize():
     #print(len(deca))
     x = len(deca)
