@@ -73,7 +73,7 @@ def randomize():
         for dete, produkt in lista:
             file.write(f"{dete:<10} | treba da kupi | {produkt:<15}\n")
         file.write("_" * 40 + "\n")
-
+### ?Main function part
 def main():
     produkt=input("Vasiot izbor e ... (za da kreirate lista pritisnete Enter) ")
     if produkt == "Lista":
