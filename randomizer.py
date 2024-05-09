@@ -7,8 +7,7 @@ import datetime
 pprint.pprint("-"*70)
 print("""     
       If You want to see the list of children type in Lista 
-      If You want to add dete to deca type Add
-      If You want to delete a dete type Delete
+      If You want to add or delete dete type Manage
       If You want to create a List for Breakfast press Enter
       """)
 pprint.pprint("-"*70)
@@ -32,16 +31,27 @@ def show_deca(deca):
             lista.write("_"*25)
             lista.write("\n")
     print("Listata e aktuelizirana!")
+    
+def manage_deca():
+    vnes = input("Za da dodate dete vnesete Add, za da odzemete vnesete Delete")
+    if vnes == "Add":
+        new_dete = input("Napiseto go imeto na deteto ==>")
+        deca.append(new_dete)
+        show_deca(deca)
+    if vnes == "Delete":
+       out_dete = input("Koe dete sakate da go izbrisete ===>")
+       deca.remove(out_dete)
+       show_deca(deca) 
 
-def add_dete():
-    new_dete = input("Napiseto go imeto na deteto ==>")
-    deca.append(new_dete)
-    show_deca(deca)
+# def add_dete():
+#     new_dete = input("Napiseto go imeto na deteto ==>")
+#     deca.append(new_dete)
+#     show_deca(deca)
 
-def remove_dete():
-    out_dete = input("Koe dete sakate da go izbrisete ===>")
-    deca.remove(out_dete)
-    show_deca(deca)
+# def remove_dete():
+#     out_dete = input("Koe dete sakate da go izbrisete ===>")
+#     deca.remove(out_dete)
+#     show_deca(deca)
 
 def randomize():
     #print(len(deca))
@@ -78,8 +88,8 @@ def main():
     produkt=input("Vasiot izbor e ... (za da kreirate lista pritisnete Enter) ")
     if produkt == "Lista":
         show_deca(deca)
-    elif produkt == "Add":
-        add_dete()
+    elif produkt == "Manage":
+        manage_deca()
     elif produkt == "Delete":
         remove_dete()    
     else:
