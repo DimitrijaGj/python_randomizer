@@ -80,8 +80,6 @@ def main():
         show_deca(deca)
     elif produkt == "Manage":
         manage_deca()
-    elif produkt == "Delete":
-        remove_dete()    
     else:
         randomize()
 
