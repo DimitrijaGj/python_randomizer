@@ -33,7 +33,7 @@ def show_deca(deca):
     print("Listata e aktuelizirana!")
     
 def manage_deca():
-    vnes = input("Za da dodate dete vnesete Add, za da odzemete vnesete Delete")
+    vnes = input("Za da dodate dete vnesete Add, za da odzemete vnesete Delete. Koj e Vasiot izbor?...")
     if vnes == "Add":
         new_dete = input("Napiseto go imeto na deteto ==>")
         deca.append(new_dete)
