@@ -32,11 +32,12 @@ def list_children():
     with open ('lista.txt', 'w') as lista:
         lista.write('_'*25)
         lista.write("\n")
-        for broj,child in enumerate(children,start=1):
-            lista.write(f"{broj:<2} | {child:>5}\n")
+        for number,child in enumerate(children,start=1):
+            lista.write(f"{number:<2} | {child:>5}\n")
             lista.write("_"*25)
             lista.write("\n")
-    print("Listata e aktuelizirana!")
+        lista.write(f'List is updated on ==> {deneska} \n')
+    print("List is updated!")
     
 def manage_deca():
     vnes = input("Za da dodate dete vnesete Add, za da odzemete vnesete Delete. Koj e Vasiot izbor?...")
