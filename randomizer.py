@@ -18,17 +18,22 @@ deneska = datetime.date.today()
 nxt_week = deneska + datetime.timedelta(weeks=1)
 kw = nxt_week.isocalendar().week
 deca = ["Alfi", "Bobby", "Slavco", "Bojan", "Slagjana", "Svetlana", "Stojanco"]
-
+children = []
 
 ### Functions
-def show_deca(deca):
-    for broj,dete in enumerate(deca,start=1):
-        print(f"{broj:<2} | {dete:>5}")
+def list_children():
+    
+    while True:
+        child = input('Plese enter childs name or Type done to finish ... ')
+        if child.lower() == "done":
+            break
+        children.append(child)
+    print(children)
     with open ('lista.txt', 'w') as lista:
         lista.write('_'*25)
         lista.write("\n")
-        for broj,dete in enumerate(deca,start=1):
-            lista.write(f"{broj:<2} | {dete:>5}\n")
+        for broj,child in enumerate(children,start=1):
+            lista.write(f"{broj:<2} | {child:>5}\n")
             lista.write("_"*25)
             lista.write("\n")
     print("Listata e aktuelizirana!")
@@ -76,10 +81,10 @@ def randomize():
         file.write("_" * 40 + "\n")
 ### ?Main function part
 def main():
-    produkt=input("Vasiot izbor e ... (za da kreirate lista pritisnete Enter) ")
-    if produkt == "Lista":
-        show_deca(deca)
-    elif produkt == "Manage":
+    option=int(input("What is Your option, please enter number... "))
+    if option == 1:
+        list_children()
+    elif option == "Manage":
         manage_deca()
     else:
         randomize()

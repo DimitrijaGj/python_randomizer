@@ -2,11 +2,11 @@
 Listata e kreirana na ==>2024-05-16
 Za slednata nedela: KW >> 21
 ________________________________________
-Bojan      | treba da kupi | koza           
-Stojanco   | treba da kupi | magare         
-Bobby      | treba da kupi | boza           
-Slagjana   | treba da kupi | tulumba        
-Svetlana   | treba da kupi | kultivator     
-Alfi       | treba da kupi | motorna pila   
-Slavco     | treba da kupi | cirkuilar      
+Bobby      | treba da kupi |                
+Slavco     | treba da kupi |                
+Svetlana   | treba da kupi |                
+Bojan      | treba da kupi |                
+Slagjana   | treba da kupi |                
+Stojanco   | treba da kupi |                
+Alfi       | treba da kupi |                
 ________________________________________
