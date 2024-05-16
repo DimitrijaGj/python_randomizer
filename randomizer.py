@@ -6,9 +6,10 @@ import datetime
 
 pprint.pprint("-"*70)
 print("""     
-      If You want to see the list of children type in Lista 
-      If You want to add or delete dete type Manage
-      If You want to create a List for Breakfast press Enter
+      Chose Your options:
+      To edit List of Children type 1
+      To edit list of Items for Breakfast type 2
+      To assign Item to Children Type 3
       """)
 pprint.pprint("-"*70)
 

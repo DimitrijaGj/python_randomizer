@@ -1,12 +1,12 @@
 ----------------------------------------
-Listata e kreirana na ==>2024-05-07
-Za slednata nedela: KW >> 20
+Listata e kreirana na ==>2024-05-16
+Za slednata nedela: KW >> 21
 ________________________________________
-Alfi       | treba da kupi | Krastavica     
-Stojanco   | treba da kupi | Marula         
-Svetlana   | treba da kupi | Kromid         
-Bojan      | treba da kupi | Luk            
-Bobby      | treba da kupi | Magdanos       
-Slavco     | treba da kupi | Modar Patlidzan
-Slagjana   | treba da kupi | Piperka        
+Bojan      | treba da kupi | koza           
+Stojanco   | treba da kupi | magare         
+Bobby      | treba da kupi | boza           
+Slagjana   | treba da kupi | tulumba        
+Svetlana   | treba da kupi | kultivator     
+Alfi       | treba da kupi | motorna pila   
+Slavco     | treba da kupi | cirkuilar      
 ________________________________________
