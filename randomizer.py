@@ -29,14 +29,14 @@ def list_children():
             break
         children.append(child)
     print(children)
-    with open ('lista.txt', 'w') as lista:
-        lista.write('_'*25)
-        lista.write("\n")
+    with open ('children_list.txt', 'w') as children_list:
+        children_list.write('_'*25)
+        children_list.write("\n")
         for number,child in enumerate(children,start=1):
-            lista.write(f"{number:<2} | {child:>5}\n")
-            lista.write("_"*25)
-            lista.write("\n")
-        lista.write(f'List is updated on ==> {deneska} \n')
+            children_list.write(f"{number:<2} | {child:>5}\n")
+            children_list.write("_"*25)
+            children_list.write("\n")
+        children_list.write(f'List is updated on ==> {deneska} \n')
     print("List is updated!")
     
 def manage_deca():
@@ -60,24 +60,24 @@ def randomize():
         produkti.append(produkt)
         for y in random.sample(deca, x):
                dete.append(y)        
-    lista = list(zip(dete, produkti))
+    children_list = list(zip(dete, produkti))
     print("-"*40)
-    print("Listata e kreirana na ==>", deneska)
+    print("children_listta e kreirana na ==>", deneska)
     print("Za slednata nedela: KW >>", kw)
     print("_"*40)
-    for dete, produkt in lista:
+    for dete, produkt in children_list:
         print(f"{dete:<10} | treba da kupi | {produkt:<15}")
         with open ('output.txt', 'w') as file:
-            for item in lista:
+            for item in children_list:
                 file.write(f"{item}\n")
     print("_"*40)
     
     with open('output.txt', 'w') as file:
         file.write("-" * 40 + "\n")
-        file.write(f"Listata e kreirana na ==>{deneska}\n")
+        file.write(f"children_listta e kreirana na ==>{deneska}\n")
         file.write(f"Za slednata nedela: KW >> {kw}\n")
         file.write("_" * 40 + "\n")
-        for dete, produkt in lista:
+        for dete, produkt in children_list:
             file.write(f"{dete:<10} | treba da kupi | {produkt:<15}\n")
         file.write("_" * 40 + "\n")
 ### ?Main function part
